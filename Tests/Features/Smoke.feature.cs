@@ -129,11 +129,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("User opens Amazon page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 15
- testRunner.When("User makes search by product name \'Apple Pencil (1st Generation)\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User makes search by product name \'Lenovo Tab P11 Pro\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
- testRunner.Then("User checks that the first item in the list has name \'Apple Pencil (1st Generatio" +
-                        "n)\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("User checks that the first item in the list has name \'Lenovo Tab P11 Pro\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -364,7 +363,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("User increases quantity of goods", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 65
- testRunner.Then("The order price in the cart is \'$39.98\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The order price in the cart is \'$51.98\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

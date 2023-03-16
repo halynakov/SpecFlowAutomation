@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Final_Task.Pages
 {
@@ -20,6 +21,11 @@ namespace Final_Task.Pages
         public string GetProductPrice()
         {
             return ProductPrice.Text;
+        }
+        public void ClickOnProductNameButton()
+        {
+            ProductName.Click();
+            Thread.Sleep(2000);
         }
     }
 }

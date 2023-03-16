@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Final_Task.Pages
 {
@@ -12,7 +13,7 @@ namespace Final_Task.Pages
         private static SearchResultsPage _resultsPage;
         public static SearchResultsPage Instance => _resultsPage ?? (_resultsPage = new SearchResultsPage());
         IWebElement ActualItem => DriverManager.Instance().FindElement(By.XPath("//span[@class='a-size-medium a-color-base a-text-normal']"));
-        public string GetFirstSearchResult()
+        public string GetItemName()
         {
             return ActualItem.Text;
         }

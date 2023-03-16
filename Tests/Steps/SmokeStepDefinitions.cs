@@ -25,7 +25,7 @@ namespace Tests.Steps
         [Then(@"User checks that the first item in the list has name '([^']*)'")]
         public void CheckTheFirstItem(string expected_name)
         {
-            Assert.AreEqual(expected_name, SearchResultsPage.Instance.GetFirstSearchResult());
+            Assert.AreEqual(expected_name, SearchResultsPage.Instance.GetItemName());
         }
         [Given(@"User clicks on '([^']*)' section")]
         public void ClickOnItemSection(string section)
@@ -201,7 +201,7 @@ namespace Tests.Steps
         }
 
 
-        [AfterTestRun]
+        [AfterScenario]
         public static void AfterTestRun()
         {   
             DriverManager.QuitDriver();

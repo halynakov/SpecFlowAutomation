@@ -16,7 +16,7 @@ namespace Final_Task.Pages
         IWebElement ActualSectionName => DriverManager.Instance().FindElement(By.XPath("//span[@class = 'a-color-state a-text-bold']"));
         IWebElement InputMinPrice => DriverManager.Instance().FindElement(By.XPath("//input[@name = 'low-price']"));
         IWebElement InputMaxPrice => DriverManager.Instance().FindElement(By.XPath("//input[@name = 'high-price']"));
-        IWebElement GoButton => DriverManager.Instance().FindElement(By.XPath("//input[@aria-labelledby = 'a-autoid-3-announce']"));
+        IWebElement GoButton => DriverManager.Instance().FindElement(By.XPath("//input[@aria-labelledby = 'a-autoid-1-announce']"));
         public void ClickItemButton()
         {
             ItemButton.Click();

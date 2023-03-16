@@ -12,8 +12,8 @@ Scenario: Check opening the 'gaming headsets' page when clicking on 'Headsets' s
 @smoke
 Scenario: Check search for a product by its name
 	Given User opens Amazon page
-	When User makes search by product name 'Apple Pencil (1st Generation)'
-	Then User checks that the first item in the list has name 'Apple Pencil (1st Generation)'
+	When User makes search by product name 'Lenovo Tab P11 Pro'
+	Then User checks that the first item in the list has name 'Lenovo Tab P11 Pro'
 
 @smoke
 Scenario: Check the addition of items to the cart
@@ -62,7 +62,7 @@ Scenario: Check that the order price increases when the quantity of goods is inc
 	When User adds product to the cart
 	And User goes to the cart
 	And User increases quantity of goods
-	Then The order price in the cart is '$39.98'
+	Then The order price in the cart is '$51.98'
 
 @smoke
 Scenario: Check deleting all goods from the cart

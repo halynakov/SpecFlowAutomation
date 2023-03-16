@@ -9,15 +9,16 @@ namespace Final_Task.Pages
         public ItemPage() { }
         private static ItemPage _item_page;
         public static ItemPage Instance => _item_page ?? (_item_page = new ItemPage());
-        IWebElement CartButton => DriverManager.Instance().FindElement(By.XPath("//input[@name='submit.add-to-cart']"));
+        IWebElement AddCartButton => DriverManager.Instance().FindElement(By.XPath("//input[@id='add-to-cart-button']"));
+        IWebElement GoToCartButton => DriverManager.Instance().FindElement(By.XPath("//input[@aria-labelledby='attach-sidesheet-view-cart-button-announce']"));
         IWebElement AmountItemsOnCart => DriverManager.Instance().FindElement(By.XPath("//span[@id='nav-cart-count']"));
-        IWebElement Cart_Button => DriverManager.Instance().FindElement(By.XPath("//a[contains(text(),'Go to Cart')]"));
         public void AddToCart()
         {
             HomePage.Instance.ClickLocationButton();
             HomePage.Instance.ChangeLocationButton();
             HomePage.Instance.ClickDoneButton();
-            CartButton.Click();
+            AddCartButton.Click();
+            Thread.Sleep(8000);
         }
         public string GetAmountOfItemsInCart()
         {
@@ -25,7 +26,8 @@ namespace Final_Task.Pages
         }
         public void GoToTheCart()
         {
-            Cart_Button.Click();
+            GoToCartButton.Click();
+            Thread.Sleep(4000);
         }
     }
 }
