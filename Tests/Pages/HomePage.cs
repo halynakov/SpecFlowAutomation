@@ -9,6 +9,7 @@ namespace Final_Task.Pages
     {
         public HomePage() { }
         private string URL => "https://www.amazon.com";
+        IWebElement ChooseLanguageButton => DriverManager.Instance().FindElement(By.XPath("//span[text() = 'Deutsch']"));
         IWebElement InputSearchButton => DriverManager.Instance().FindElement(By.XPath("//input[@type='text']"));
         IWebElement SearchButton => DriverManager.Instance().FindElement(By.XPath("//input[@id='nav-search-submit-button']"));
         IWebElement SectionButton => DriverManager.Instance().FindElement(By.XPath("//span[text()='Headsets']"));
@@ -17,7 +18,6 @@ namespace Final_Task.Pages
         IWebElement CountryButton => DriverManager.Instance().FindElement(By.XPath("//a[@tabindex = '-1' and text() =  'United Kingdom']"));
         IWebElement DoneButton => DriverManager.Instance().FindElement(By.XPath("//button[@name = 'glowDoneButton']"));
         IWebElement LanguageButton => DriverManager.Instance().FindElement(By.XPath("//span[@class ='nav-line-2']"));
-        IWebElement ChooseLanguageButton => DriverManager.Instance().FindElement(By.XPath("//span[text() = 'Deutsch']"));
         IWebElement SectionName => DriverManager.Instance().FindElement(By.XPath("//a[text() = 'Geschenkkarten ']"));
         IWebElement CategoryName => DriverManager.Instance().FindElement(By.XPath("//a[@aria-label = 'Toys & Games']"));
         IWebElement AllButton => DriverManager.Instance().FindElement(By.XPath("//span[@class = 'hm-icon-label']"));
@@ -28,7 +28,7 @@ namespace Final_Task.Pages
         public void OpenHomePage()
         {
             DriverManager.Instance().Navigate().GoToUrl(URL);
-            Thread.Sleep(10000);
+            Thread.Sleep(2000);
         }
         public void EnterSearchInputButton(string name)
         {

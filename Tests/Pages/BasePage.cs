@@ -13,6 +13,7 @@ namespace Final_Task.Pages
     public class BasePage
     {
         public BasePage() { }
+        
         public IWebElement FindElement(By locator)
         {
             return DriverManager.Instance().FindElement(locator);

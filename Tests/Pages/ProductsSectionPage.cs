@@ -13,7 +13,7 @@ namespace Final_Task.Pages
         private static ProductsSectionPage _productsPage;
         public static ProductsSectionPage Instance => _productsPage ?? (_productsPage = new ProductsSectionPage());
         IWebElement ItemButton => DriverManager.Instance().FindElement(By.XPath("//span[@class = 'a-size-medium a-color-base a-text-normal']"));
-        IWebElement ActualSectionName => DriverManager.Instance().FindElement(By.XPath("//span[@class = 'a-color-state a-text-bold']"));
+        IWebElement ActualSectionName => DriverManager.Instance().FindElement(By.XPath("//span[text() = '\"gaming headsets\"']"));
         IWebElement InputMinPrice => DriverManager.Instance().FindElement(By.XPath("//input[@name = 'low-price']"));
         IWebElement InputMaxPrice => DriverManager.Instance().FindElement(By.XPath("//input[@name = 'high-price']"));
         IWebElement GoButton => DriverManager.Instance().FindElement(By.XPath("//input[@aria-labelledby = 'a-autoid-1-announce']"));

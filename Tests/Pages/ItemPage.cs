@@ -18,7 +18,7 @@ namespace Final_Task.Pages
             HomePage.Instance.ChangeLocationButton();
             HomePage.Instance.ClickDoneButton();
             AddCartButton.Click();
-            Thread.Sleep(8000);
+            Thread.Sleep(3000);
         }
         public string GetAmountOfItemsInCart()
         {
@@ -27,7 +27,7 @@ namespace Final_Task.Pages
         public void GoToTheCart()
         {
             GoToCartButton.Click();
-            Thread.Sleep(4000);
+            Thread.Sleep(2000);
         }
     }
 }

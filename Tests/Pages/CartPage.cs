@@ -30,7 +30,7 @@ namespace Final_Task.Pages
         public void ChangeAmountOfGoods()
         {
             Qty2Button.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
         }
         public string GetActualCart()
         {

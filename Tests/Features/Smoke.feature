@@ -4,16 +4,18 @@
 		So that I can be sure that site works correctly
 
 @smoke
-Scenario: Check opening the 'gaming headsets' page when clicking on 'Headsets' section
-	Given User opens Amazon page
+Scenario Outline: Check opening the 'gaming headsets' page when clicking on 'Headsets' section
+  Given User opens Amazon page
     When User clicks on 'Headsets' section
-	Then Page with the '"gaming headsets"' title is opened
+  Then Page with the '"gaming headsets"' title is opened
+
 
 @smoke
 Scenario: Check search for a product by its name
 	Given User opens Amazon page
 	When User makes search by product name 'Lenovo Tab P11 Pro'
 	Then User checks that the first item in the list has name 'Lenovo Tab P11 Pro'
+
 
 @smoke
 Scenario: Check the addition of items to the cart
@@ -22,13 +24,6 @@ Scenario: Check the addition of items to the cart
 	And User goes to 'Targeal 7.1 Surround Sound Gaming Headset' product page
 	When User adds product to the cart
 	Then Number of items in the cart is '1'
-
-@smoke
-Scenario: Check that user can change location
-	Given User opens Amazon page
-	And User clicks on Location button
-	When User changes location to 'United Kingdom' country
-	Then Location changes to 'United Kingdom' country
 
 @smoke
 Scenario: Check filtering products by brand
@@ -80,3 +75,11 @@ Scenario: Check that user can change language
   And User hovers on Language button
   When User changes language to 'Deutsch'  
   Then Section is translated into 'Geschenkkarten'
+
+
+  @smoke
+Scenario: Check that user can change location
+	Given User opens Amazon page
+	And User clicks on Location button
+	When User changes location to 'United Kingdom' country
+	Then Location changes to 'United Kingdom' country

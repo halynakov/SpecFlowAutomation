@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Final_Task", "Tests\Final_Task.csproj", "{2206B009-CC09-477B-A587-406C26190B5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smoke_AQA", "Tests\Smoke_AQA.csproj", "{2206B009-CC09-477B-A587-406C26190B5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
